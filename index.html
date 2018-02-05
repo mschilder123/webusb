@@ -1,5 +1,4 @@
 <html><head><script>
-// serial.js
 u2f = {};
 
 (function() {
@@ -13,7 +12,7 @@ u2f = {};
 
   u2f.requestPort = function() {
     const filters = [
-      //{ 'vendorId': 0x1050, 'productId': 0x0211 }, // winusb fw
+      { 'vendorId': 0x1050, 'productId': 0x0211 }, // winusb fw
       { 'vendorId': 0x18d1, 'productId': 0x5026, 'classCode': 255 }, // vendor interface
     ];
     return navigator.usb.requestDevice({ 'filters': filters }).then(
@@ -110,7 +109,6 @@ u2f = {};
   };
 })();
 
-// rgb.js
 (function() {
   'use strict';
 
