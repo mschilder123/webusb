@@ -58,7 +58,7 @@ u2f = {};
             return this.device_.selectConfiguration(0);
           }
         })
-        .then(() => this.device_.claimInterface(0))
+        .then(() => this.device_.claimInterface(1))
         .then(() => {
           var cmd = new Uint8Array(4+3+8);
           cmd[0] = 0xff;
